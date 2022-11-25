@@ -1,7 +1,7 @@
 import "./Meme.css"
 import React from "react"
 
-export default function Meme(){
+export default function Meme(props){
     
     const [ meme, setMeme ] = React.useState({
         topText : "",
@@ -42,8 +42,8 @@ export default function Meme(){
     }  
 
     return(
-        <main>
-            <form className="meme-form">
+        <main id = {props.id}>
+            <form className="meme-form" >
                 <input type = "text" name = "topText" placeholder = "Top text" onChange = { handleChange } value={ meme.topText } className = "form-input" />
                 <input type = "text" name = "bottomText" placeholder = "Bottom text" onChange = { handleChange } value={ meme.bottomText } className = "form-input" />
             
